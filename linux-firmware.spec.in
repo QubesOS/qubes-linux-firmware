@@ -16,6 +16,7 @@ Source0:	https://www.kernel.org/pub/linux/kernel/firmware/%{name}-%{version}.tar
 
 BuildRequires:	make
 BuildRequires:	git-core
+# Not required but de-dupes FW so reduces size
 BuildRequires:	rdfind
 
 Requires:	linux-firmware-whence
