@@ -337,6 +337,7 @@ make DESTDIR=%{buildroot}/ FIRMWAREDIR=%{_firmwarepath} install-zst
 %else
 make DESTDIR=%{buildroot}/ FIRMWAREDIR=%{_firmwarepath} install
 %endif
+make DESTDIR=%{buildroot}/ FIRMWAREDIR=%{_firmwarepath} dedup
 
 #Cleanup files we don't want to ship
 pushd %{buildroot}/%{_firmwarepath}
@@ -526,6 +527,7 @@ sed -e 's/^/%%dir /' linux-firmware.dirs >> linux-firmware.files
 %{_firmwarepath}/iwlwifi-Qu*.ucode*
 %{_firmwarepath}/iwlwifi-ty-a0*
 %{_firmwarepath}/iwlwifi-so-a0*
+%{_firmwarepath}/iwlwifi-bz-b0*
 
 %files -n libertas-firmware
 %license LICENCE.Marvell LICENCE.OLPC
