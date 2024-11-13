@@ -7,7 +7,8 @@ Name:		linux-firmware
 Version:	@VERSION@
 Release:	@REL@%{?dist}
 Summary:	Firmware files used by the Linux kernel
-License:	GPL+ and GPLv2+ and MIT and Redistributable, no modification permitted
+# Automatically converted from old format: GPL+ and GPLv2+ and MIT and Redistributable, no modification permitted - review is highly recommended.
+License:	GPL-1.0-or-later AND GPL-2.0-or-later AND LicenseRef-Callaway-MIT AND LicenseRef-Callaway-Redistributable-no-modification-permitted
 URL:		http://www.kernel.org/
 BuildArch:	noarch
 Epoch:      1
@@ -16,6 +17,7 @@ Source0:	%{name}-%{version}.tar
 
 BuildRequires:	make
 BuildRequires:	git-core
+BuildRequires:	python3
 # Not required but de-dupes FW so reduces size
 BuildRequires:	rdfind
 
@@ -53,21 +55,24 @@ operate.
 
 %package whence
 Summary:	WHENCE License file
-License:	GPL+ and GPLv2+ and MIT and Redistributable, no modification permitted
+# Automatically converted from old format: GPL+ and GPLv2+ and MIT and Redistributable, no modification permitted - review is highly recommended.
+License:	GPL-1.0-or-later AND GPL-2.0-or-later AND LicenseRef-Callaway-MIT AND LicenseRef-Callaway-Redistributable-no-modification-permitted
 %description whence
 This package contains the WHENCE license file which documents the vendor license details.
 
 # GPU firmwares
 %package -n amd-gpu-firmware
 Summary:	Firmware for AMD GPUs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n amd-gpu-firmware
 Firmware for AMD amdgpu and radeon GPUs.
 
 %package -n intel-gpu-firmware
 Summary:	Firmware for Intel GPUs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n intel-gpu-firmware
 Firmware for Intel GPUs including GuC (Graphics Microcontroller), HuC (HEVC/H.265
@@ -76,7 +81,8 @@ platforms.
 
 %package -n nvidia-gpu-firmware
 Summary:	Firmware for NVIDIA GPUs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n nvidia-gpu-firmware
 Firmware for NVIDIA GPUs.
@@ -84,29 +90,33 @@ Firmware for NVIDIA GPUs.
 # Microcode updates
 %package -n amd-ucode-firmware
 Summary:	Microcode updates for AMD CPUs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n amd-ucode-firmware
-Microcode updates for AMD CPUs, AMD SEV amd TEE.
+Microcode updates for AMD CPUs, AMD SEV and AMD TEE.
 
 # WiFi/Bluetooth firmwares
 %package -n atheros-firmware
 Summary:	Firmware for Qualcomm Atheros WiFi/Bluetooth adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n atheros-firmware
 Firmware for Qualcomm Atheros ath6k/ath9k/ath10k/ath11k WiFi adapters.
 
 %package -n brcmfmac-firmware
 Summary:	Firmware for Broadcom/Cypress brcmfmac WiFi/Bluetooth adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n brcmfmac-firmware
 Firmware for Broadcom/Cypress brcmfmac WiFi/Bluetooth adapters.
 
 %package -n iwlegacy-firmware
 Summary:	Firmware for Intel(R) Wireless WiFi Link 3945(A)BG and 4965AGN adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 Obsoletes:	iwl3945-firmware < %{epoch}:%{version}-%{release}
 Obsoletes:	iwl4965-firmware < %{epoch}:%{version}-%{release}
@@ -120,7 +130,8 @@ inside the provided LICENSE file. Please read it carefully.
 
 %package -n iwlwifi-dvm-firmware
 Summary:	DVM Firmware for Intel(R) Wireless WiFi adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 Obsoletes:	iwl100-firmware < %{epoch}:%{version}-%{release}
 Obsoletes:	iwl105-firmware < %{epoch}:%{version}-%{release}
@@ -154,7 +165,8 @@ provided LICENSE file. Please read it carefully.
 
 %package -n iwlwifi-mvm-firmware
 Summary:	MVM Firmware for Intel(R) Wireless WiFi adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 Obsoletes:	iwl3160-firmware < %{epoch}:%{version}-%{release}
 Obsoletes:	iwl7260-firmware < %{epoch}:%{version}-%{release}
@@ -170,7 +182,8 @@ provided LICENSE file. Please read it carefully.
 
 %package -n libertas-firmware
 Summary:	Firmware for Marvell Libertas SD/USB WiFi Network Adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 Obsoletes:      libertas-sd8686-firmware < %{epoch}:%{version}-%{release}
 Obsoletes:      libertas-sd8787-firmware < %{epoch}:%{version}-%{release}
@@ -186,28 +199,32 @@ Including the SD 8686/8787 and USB 8388/8388.
 
 %package -n mt7xxx-firmware
 Summary:	Firmware for Mediatek 7600/7900 series WiFi/Bluetooth adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n mt7xxx-firmware
 Firmware for Mediatek 7600/7900 series WiFi/Bluetooth adapters
 
 %package -n nxpwireless-firmware
 Summary:	Firmware for NXP WiFi/Bluetooth/UWB adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n nxpwireless-firmware
 Firmware for NXP WiFi/Bluetooth/UWB adapters.
 
 %package -n realtek-firmware
 Summary:	Firmware for Realtek WiFi/Bluetooth adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n realtek-firmware
 Firmware for Realtek WiFi/Bluetooth adapters
 
 %package -n tiwilink-firmware
 Summary:	Firmware for Texas Instruments WiFi/Bluetooth adapters
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n tiwilink-firmware
 Firmware for Texas Instruments WiFi/Bluetooth adapters
@@ -215,35 +232,40 @@ Firmware for Texas Instruments WiFi/Bluetooth adapters
 # SMART NIC and network switch firmwares
 %package -n liquidio-firmware
 Summary:	Firmware for Cavium LiquidIO Intelligent Server Adapter
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n liquidio-firmware
 Firmware for Cavium LiquidIO Intelligent Server Adapter
 
 %package -n mlxsw_spectrum-firmware
 Summary:	Firmware for Mellanox Spectrum 1/2/3 Switches
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n mlxsw_spectrum-firmware
 Firmware for Mellanox Spectrumi series 1/2/3 ethernet switches.
 
 %package -n mrvlprestera-firmware
 Summary:	Firmware for Marvell Prestera Switchdev/ASIC devices
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n mrvlprestera-firmware
 Firmware for Marvell Prestera Switchdev/ASIC devices
 
 %package -n netronome-firmware
 Summary:	Firmware for Netronome Smart NICs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n netronome-firmware
 Firmware for Netronome Smart NICs
 
 %package -n qed-firmware
 Summary:	Firmware for Marvell FastLinQ adapters family
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n qed-firmware
 Firmware for Marvell FastLinQ adapters family (QDE), this device
@@ -253,7 +275,8 @@ and ethernet including SRIOV, DCB etc.
 # Silicon Vendor specific
 %package -n qcom-firmware
 Summary:	Firmware for Qualcomm SoCs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 Requires:	atheros-firmware = %{epoch}:%{version}-%{release}
 %description -n qcom-firmware
@@ -264,7 +287,8 @@ modem, Sensor DSPs.
 # Vision and ISP hardware
 %package -n intel-vsc-firmware
 Summary:	Firmware files for Intel Visual Sensing Controller (IVSC)
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n intel-vsc-firmware
 Firmware files for Intel Visual Sensing Controller (IVSC) for
@@ -273,14 +297,16 @@ Tiger Lake, Alder Lake and Raptor Lake SoCs and the IPU3/6 firmware.
 # Sound codec hardware
 %package -n cirrus-audio-firmware
 Summary:	Firmware for Cirrus audio amplifiers and codecs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n cirrus-audio-firmware
 Firmware for Cirrus audio amplifiers and codecs
 
 %package -n intel-audio-firmware
 Summary:	Firmware for Intel audio DSP amplifiers and codecs
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n intel-audio-firmware
 Firmware for Intel audio DSP amplifiers and codecs
@@ -288,7 +314,8 @@ Firmware for Intel audio DSP amplifiers and codecs
 # Random other hardware
 %package -n dvb-firmware
 Summary:	Firmware for various DVB broadcast receivers
-License:	Redistributable, no modification permitted
+# Automatically converted from old format: Redistributable, no modification permitted - review is highly recommended.
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:	linux-firmware-whence
 %description -n dvb-firmware
 Firmware for various DVB broadcast receivers. These include the
