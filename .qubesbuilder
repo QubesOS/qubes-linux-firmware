@@ -5,4 +5,7 @@ host:
 source:
   files:
   - url: https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-@VERSION@.tar.xz
-    sha512: linux-firmware-@VERSION@.tar.xz.sha512
+    signature: https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-@VERSION@.tar.sign
+    uncompress: true
+    pubkeys:
+    - firmware-1-key.asc

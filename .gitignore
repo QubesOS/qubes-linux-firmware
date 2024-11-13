@@ -1,4 +1,7 @@
 *.swp
 *.tar.xz
+*.tar
+*.tar.sign
+*.tar.xz.UNTRUSTED
 *.bin
 /pkgs/
