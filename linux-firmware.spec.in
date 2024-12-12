@@ -377,6 +377,7 @@ sed -i -e 's:^./::' linux-firmware.{files,dirs}
 sed \
 	-i -e '/^a300_p/d' \
 	-i -e '/^amdgpu/d' \
+	-i -e '/^amdnpu/d' \
 	-i -e '/^amd/d' \
 	-i -e '/^amdtee/d' \
 	-i -e '/^amd-ucode/d' \
@@ -447,8 +448,9 @@ sed -e 's/^/%%dir /' linux-firmware.dirs >> linux-firmware.files
 
 # GPU firmwares
 %files -n amd-gpu-firmware
-%license LICENSE.radeon LICENSE.amdgpu
+%license LICENSE.radeon LICENSE.amdgpu LICENSE.amdnpu
 %{_firmwarepath}/amdgpu/
+%{_firmwarepath}/amdnpu/
 %{_firmwarepath}/radeon/
 
 %files -n intel-gpu-firmware
