@@ -630,6 +630,8 @@ end
 %{_firmwarepath}/iwlwifi-gl-c0*1??.ucode*
 %{_firmwarepath}/intel/iwlwifi/iwlwifi-gl-c0*9[7-9].ucode*
 %{_firmwarepath}/intel/iwlwifi/iwlwifi-gl-c0*1??.ucode*
+%{_firmwarepath}/iwlwifi-sc-a0-wh-b0-1??.ucode*
+%{_firmwarepath}/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-1??.ucode*
 
 %files -n libertas-firmware
 %license LICENCE.Marvell LICENCE.OLPC
