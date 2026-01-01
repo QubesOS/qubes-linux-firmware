@@ -445,6 +445,7 @@ sed \
 	-i -e '/^tdmb/d' \
 	-i -e '/^ti-connectivity/d' \
 	-i -e '/^v4l-cx2/d' \
+	-i -e '/^xe/d' \
 	linux-firmware.{files,dirs}
 sed -i -e 's!^!/usr/lib/firmware/!' linux-firmware.{files,dirs}
 sed -i -e 's/^/"/;s/$/"/' linux-firmware.files
@@ -523,6 +524,7 @@ end
 %files -n intel-gpu-firmware
 %license LICENSE.i915
 %{_firmwarepath}/i915/
+%{_firmwarepath}/xe/
 
 %files -n nvidia-gpu-firmware
 %license LICENCE.nvidia
