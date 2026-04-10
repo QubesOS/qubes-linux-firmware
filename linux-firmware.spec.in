@@ -409,6 +409,7 @@ sed \
 	-i -e '/^i915/d' \
 	-i -e '/^intel\/avs/d' \
 	-i -e '/^intel\/catpt/d' \
+	-i -e '/^intel\/IntcSST2.bin/d' \
 	-i -e '/^intel\/dsp_fw/d' \
 	-i -e '/^intel\/fw_sst/d' \
 	-i -e '/^intel\/ipu/d' \
@@ -727,6 +728,7 @@ end
 %{_firmwarepath}/intel/catpt/*
 %{_firmwarepath}/intel/dsp_fw*
 %{_firmwarepath}/intel/fw_sst*
+%{_firmwarepath}/intel/IntcSST2.bin*
 
 # Random other hardware
 %files -n dvb-firmware
