@@ -236,7 +236,7 @@ Firmware for Realtek WiFi/Bluetooth adapters
 %package -n qcom-wwan-firmware
 Summary:       Firmware for Qualcomm Wireless WAN modems
 License:       LicenseRef-Callaway-Redistributable-no-modification-permitted
-Requires:      linux-firmware-whence = %{version}-%{release}
+Requires:      linux-firmware-whence = %{epoch}:%{version}-%{release}
 %description -n qcom-wwan-firmware
 Firmware for Qualcomm Snapdragon X-series (SDX) wireless WAN modems used
 across numerous WWAN cards from numerous vendors.
@@ -285,7 +285,7 @@ Firmware for Netronome Smart NICs
 %package -n qcom-accel-firmware
 Summary:       Firmware for Qualcomm Technologies data center / Open-vRAN Accelerators
 License:       LicenseRef-Callaway-Redistributable-no-modification-permitted
-Requires:      linux-firmware-whence = %{version}-%{release}
+Requires:      linux-firmware-whence = %{epoch}:%{version}-%{release}
 %description -n qcom-accel-firmware
 Firmware for Qualcomm Technologies data center and Open-vRAN accelerators
 including the X100 5G RAN Accelerator Card, the QRU100 5G RAN Platform
@@ -305,8 +305,8 @@ and ethernet including SRIOV, DCB etc.
 %package -n mediatek-firmware
 Summary:    Firmware for Mediatek SoCs
 License:    LicenseRef-Callaway-Redistributable-no-modification-permitted
-Requires:    linux-firmware-whence = %{version}-%{release}
-Requires:    atheros-firmware = %{version}-%{release}
+Requires:    linux-firmware-whence = %{epoch}:%{version}-%{release}
+Requires:    atheros-firmware = %{epoch}:%{version}-%{release}
 %description -n mediatek-firmware
 Firmware for various compoents in Mediatek SoCs, in particular SCP.
 
