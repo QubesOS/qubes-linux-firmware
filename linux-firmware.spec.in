@@ -752,11 +752,12 @@ end
 %files -n qcom-firmware
 %license LICENSES/LICENSE.qcom LICENSES/LICENSE.qcom_yamato LICENSES/NOTICE.qcom
 %dir %{_firmwarepath}/qcom
+%{_firmwarepath}/a300_p*
 %{_firmwarepath}/qcom/eliza/
 %{_firmwarepath}/qcom/glymur/
 %{_firmwarepath}/qcom/hawi/
 %{_firmwarepath}/qcom/kaanapali/
-%{_firmwarepath}/a300_p*
+%{_firmwarepath}/qcom/nord/
 %{_firmwarepath}/qcom/*.fw*
 %{_firmwarepath}/qcom/*.bin*
 %{_firmwarepath}/qcom/*.m*
