@@ -157,6 +157,7 @@ Provides:	iwl6000-firmware = %{epoch}:%{version}-%{release}
 Provides:	iwl6000g2a-firmware = %{epoch}:%{version}-%{release}
 Provides:	iwl6000g2b-firmware = %{epoch}:%{version}-%{release}
 Provides:	iwl6050-firmware = %{epoch}:%{version}-%{release}
+Requires:	iwlbluetooth-firmware = %{epoch}:%{version}-%{release}
 %description -n iwlwifi-dvm-firmware
 This package contains the firmware required by the iwlwifi driver
 for Linux built with DVM firmware support (CONFIG_IWLDVM=y/m). Usage of
@@ -176,16 +177,26 @@ Obsoletes:	iwlax2xx-firmware < %{epoch}:%{version}-%{release}
 Provides:	iwl3160-firmware = %{epoch}:%{version}-%{release}
 Provides:	iwl7260-firmware = %{epoch}:%{version}-%{release}
 Provides:	iwlax2xx-firmware = %{epoch}:%{version}-%{release}
+Requires:	iwlbluetooth-firmware = %{epoch}:%{version}-%{release}
 %description -n iwlwifi-mvm-firmware
 This package contains the firmware required by the iwlwifi driver
 for Linux built with MVM firmware support (CONFIG_IWLMVM=y/m).  Usage of
 the firmware is subject to the terms and conditions contained inside the
 provided LICENSE file. Please read it carefully.
 
+%package -n iwlbluetooth-firmware
+Summary:	Bluetooth Firmware for Intel(R) Wireless WiFi adapters
+License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
+Requires:	linux-firmware-whence = %{version}-%{release}
+%description -n iwlbluetooth-firmware
+This package contains the firmware required by the iwlwifi devices that
+support bluetooth.
+
 %package -n iwlwifi-mld-firmware
 Summary:    MLD Firmware for Intel(R) Wireless WiFi adapters
 License:    LicenseRef-Callaway-Redistributable-no-modification-permitted
 Requires:   linux-firmware-whence = %{epoch}:%{version}-%{release}
+Requires:	iwlbluetooth-firmware = %{epoch}:%{version}-%{release}
 %description -n iwlwifi-mld-firmware
 This package contains the firmware required by the iwlwifi driver
 for Linux built with MLD firmware support (CONFIG_IWLMLD=y/m).  Usage of
@@ -436,6 +447,7 @@ sed \
 	-i -e '/^intel\/IntcSST2.bin/d' \
 	-i -e '/^intel\/dsp_fw/d' \
 	-i -e '/^intel\/fw_sst/d' \
+	-i -e '/^intel\/ibt/d' \
 	-i -e '/^intel\/ipu/d' \
 	-i -e '/^intel\/ipu3/d' \
 	-i -e '/^intel\/irci_irci/d' \
@@ -658,6 +670,10 @@ end
 %{_firmwarepath}/intel/iwlwifi/iwlwifi-sc-a0-??-?0-1??.ucode*
 %{_firmwarepath}/iwlwifi-sc-a0-??-?0-c1??.ucode*
 %{_firmwarepath}/intel/iwlwifi/iwlwifi-sc-a0-??-?0-c1??.ucode*
+
+%files -n iwlbluetooth-firmware
+%license LICENSES/LICENCE.ibt_firmware
+%{_firmwarepath}/intel/ibt*
 
 %files -n libertas-firmware
 %license LICENSES/LICENCE.Marvell LICENSES/LICENCE.OLPC
