@@ -83,7 +83,7 @@ platforms.
 %package -n intel-npu-firmware
 Summary:	Firmware for Intel VPU/NPU accelerators
 License:	LicenseRef-Fedora-Firmware
-Requires:	linux-firmware-whence = %{version}-%{release}
+Requires:	linux-firmware-whence = %{epoch}:%{version}-%{release}
 %description -n intel-npu-firmware
 Firmware for Intel NPU and VPU accelerators for Intel Core Ultra Series 1-3.
 
@@ -195,7 +195,7 @@ provided LICENSE file. Please read it carefully.
 %package -n iwlbluetooth-firmware
 Summary:	Bluetooth Firmware for Intel(R) Wireless WiFi adapters
 License:	LicenseRef-Callaway-Redistributable-no-modification-permitted
-Requires:	linux-firmware-whence = %{version}-%{release}
+Requires:	linux-firmware-whence = %{epoch}:%{version}-%{release}
 %description -n iwlbluetooth-firmware
 This package contains the firmware required by the iwlwifi devices that
 support bluetooth.
