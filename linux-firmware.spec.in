@@ -684,6 +684,8 @@ end
 %{_firmwarepath}/intel/iwlwifi/iwlwifi-sc-a0-??-?0-1??.ucode*
 %{_firmwarepath}/iwlwifi-sc-a0-??-?0-c1??.ucode*
 %{_firmwarepath}/intel/iwlwifi/iwlwifi-sc-a0-??-?0-c1??.ucode*
+%{_firmwarepath}/iwlwifi-sc2-a0-wh-b0-c1??.ucode*
+%{_firmwarepath}/intel/iwlwifi/iwlwifi-sc2-a0-wh-b0-c1??.ucode*
 
 %files -n iwlbluetooth-firmware
 %license LICENSES/LICENCE.ibt_firmware
